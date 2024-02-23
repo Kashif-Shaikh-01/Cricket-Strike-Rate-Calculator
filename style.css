@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: "Anta", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+body {
+  width: 100%;
+  background-color: #74ebd5;
+  background-image: linear-gradient(90deg, #74ebd5 0%, #9face6 100%);
+  /* background: #4a484e; */
+}
+.container {
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 2rem;
+  margin: 50px auto;
+}
+h1 {
+  margin: 40px;
+  color: aliceblue;
+  color: #212121;
+}
+input {
+  font-size: 2rem;
+  padding: 12px;
+  border: none;
+  width: 40%;
+  margin: 25px;
+  text-align: center;
+  border-radius: 50px;
+  outline: none;
+}
+#ballsfaced {
+  border: 2px solid transparent;
+}
+#runsscored {
+  border: 2px solid transparent;
+}
+#runsscored:focus {
+  border: 2px solid #212121;
+  transition: all 0.3s ease-in;
+}
+#ballsfaced:focus {
+  border: 2px solid #212121;
+  transition: all 0.3s ease-in;
+}
+
+button {
+  width: 20%;
+  margin: 20px 0px;
+  border-radius: 50px;
+  font-size: 2rem;
+  padding: 15px;
+  text-align: center;
+  border: 2px solid transparent;
+  font-weight: 100;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  transition: 0.2s transform ease-in-out;
+  will-change: transform;
+  z-index: 0;
+}
+button::after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: #212121;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: 0.5s transform ease-out;
+  z-index: -1;
+}
+button:hover::after {
+  transform: translate(0, 0);
+}
+button:hover {
+  border: 2px solid #d5c4f8;
+  color: aliceblue;
+  /* transform: scale(1.05); */
+}
+#results {
+  font-size: 2rem;
+  margin: 35px auto;
+  color: aliceblue;
+  color: #212121;
+}
+
+@media only screen and (max-width: 410px) {
+  .container {
+    font-size: 0.9rem;
+    margin: 20px auto;
+  }
+  h1 {
+    margin: 50px auto 25px;
+    padding: 18px;
+    word-spacing: 3px;
+  }
+  input {
+    font-size: 1.1rem;
+    padding: 12px;
+    border: none;
+    width: 75%;
+    margin: 15px;
+    text-align: left;
+    text-align: center;
+  }
+  button {
+    width: 50%;
+    margin: 20px 0px;
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+  #results {
+    font-size: 1.2rem;
+    margin: 25px auto;
+  }
+}

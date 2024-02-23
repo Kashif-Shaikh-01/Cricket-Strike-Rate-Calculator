@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anta&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <form action="">
+      <div class="container">
+        <h1>Calculate Batting strike rate</h1>
+        <input
+          id="runsscored"
+          type="text"
+          placeholder="Total Runs Scored"
+          autocomplete="off"
+          required
+        />
+        <input
+          id="ballsfaced"
+          type="text"
+          placeholder="Total Balls faced"
+          autocomplete="off"
+          required
+        />
+        <button>Calculate</button>
+        <div id="results"></div>
+      </div>
+    </form>
+    <script src="./index.js"></script>
+  </body>
+</html>
